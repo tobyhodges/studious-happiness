@@ -47,18 +47,54 @@ TypeError: 'tuple' object does not support item assignment
 first_names = ['Paul', 'Patrick', 'Sarah']
 last_names = ['Wilson', 'Shriwise', 'Stevens']
 last_names[1] = 'Nagus-Wilson'
+print(first_names)
+print(last_names)
 names = [('Paul','Wilson'), ('Patrick','Shriwise'), ('Sarah','Stevens')]
 print(names[0])
 ~~~
 {: .python}
 
-## Dictionaries add semantic value to this
+## Dictionaries add semantic value
+
+*    Once you start binding data together, it is almost always useful to add
+     semantic meaning
+*    Dictionaries allow you to name the entries that our bound together
+*    Dictionaries are mutable, you can change them
+     *   Because of semantic meaning, this is less dangerous
 
 ~~~
-PW = {'first': 'Paul', 'last': 'Wilson'}
-PS = {'first': 'Patrick', 'last': 'Shriwise'}
-SS = {'first': 'Sarah', 'last': 'Stevens'}
-instructors = { 'PW' : PW, 'PS' : PS, 'SS' : SS }
+name = {'first': 'Paul', 'last': 'Wilson'}
+print(name['first'], name['last'])
+~~~
+{: .python}
+
+*   The names of each entry are called `keys`
+*   The values of each entry are called `values`
+
+~~~
+name = {'first': 'Paul', 'last': 'Wilson'}
+print(name.keys())
+print(name.values())
+~~~
+{: .python}
+~~~
+dict_keys(['first', 'last'])
+dict_values(['Paul', 'Wilson'])
+~~~
+{: .output}
+
+
+## All container types can be nested
+
+*   Lists, tuples and dictionaries may all contain lists, tuples and dictionaries
+
+~~~
+instructors = [{'first':'Paul', 'last':'Wilson'},
+               {'first':'Sarah','last':'Stevens'},
+               {'first':'Patrick','last':'Shriwise'}]
+axes_tics = {'x': [0,0.1,0.2,0.3,0.4,0.5],
+             'y': [0,10,20,30,40,50]}
+curve_points = [(0,0), (2,3), (4,5), (6,-3), (8,-10)]
 ~~~
 {: .python}
 
