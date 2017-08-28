@@ -36,6 +36,7 @@ adjustment = 0.5   # Neither is this - anything after '#' is ignored.
 ## A function may take zero or more arguments.
 
 *   We have seen some functions already --- now let's take a closer look.
+*   Functions provide shortcuts to capability that we could probably implement manually
 *   An *argument* is a value passed into a function.
 *   `len` takes exactly one.
 *   `int`, `str`, and `float` create a new value from an existing one.
