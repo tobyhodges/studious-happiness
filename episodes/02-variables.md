@@ -60,6 +60,21 @@ Ahmed is 42 years old
 *   `print` automatically puts a single space between items to separate them.
 *   And wraps around to a new line at the end.
 
+## Use meaningful variable names.
+
+*   Python doesn't care what you call variables as long as they obey the rules
+    (alphanumeric characters and the underscore).
+
+~~~
+flabadab = 42
+ewr_422_yY = 'Ahmed'
+print(ewr_422_yY, 'is', flabadab, 'years old')
+~~~
+{: .python}
+
+*   Use meaningful variable names to help other people understand what the program does.
+*   The most important "other person" is your future self.
+
 ## Variables must be created before they are used.
 
 *   If a variable doesn't exist yet, or if the name has been mis-spelled,
@@ -106,6 +121,44 @@ print('Age in three years:', age)
 Age in three years: 45
 ~~~
 {: .output}
+
+## Avoid 'magic numbers'.
+
+*   Many numbers may have an obvious meaning when you first use them, but that meaning
+    could get forgotten over time
+*   Using a variable ensures that numbers have semantic meaning
+
+~~~
+num_senators = 2 * 50
+~~~
+{: .python}
+
+*   We may know right now that there are 2 senators per State and 50 states, but someone
+    else reading this may not know this and wonder why this is true.
+
+~~~
+num_states = 50
+senators_per_state = 2
+num_senators = senators_per_state * num_states
+~~~
+{: .python}
+
+*   This has the added value that you can reuse these variables in other places where
+    they are relevant
+
+~~~
+num_states = 50
+senators_per_state = 2
+num_senators = senators_per_state * num_states
+governors_per_state = 1
+num_governors = governors_per_state * num_states
+~~~
+{: .python}
+
+*   If the number of states changes (e.g. DC becomes a State or Texas sucedes) you only
+    need to change the number once.
+*   The same applies for other data types - avoid "magic strings" as well
+
 
 ## Use an index to get a single character from a string.
 
@@ -174,20 +227,6 @@ print(len('helium'))
 *   There are conventions for using upper-case letters at the start of variable names
     so we will use lower-case letters for now.
 
-## Use meaningful variable names.
-
-*   Python doesn't care what you call variables as long as they obey the rules
-    (alphanumeric characters and the underscore).
-
-~~~
-flabadab = 42
-ewr_422_yY = 'Ahmed'
-print(ewr_422_yY, 'is', flabadab, 'years old')
-~~~
-{: .python}
-
-*   Use meaningful variable names to help other people understand what the program does.
-*   The most important "other person" is your future self.
 
 > ## Swapping Values
 >
