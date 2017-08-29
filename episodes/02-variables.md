@@ -62,6 +62,7 @@ Ahmed is 42 years old
 
 ## Use meaningful variable names.
 
+*   **Best Practice: Write programs for people and not for computers!**
 *   Python doesn't care what you call variables as long as they obey the rules
     (alphanumeric characters and the underscore).
 
@@ -124,6 +125,7 @@ Age in three years: 45
 
 ## Avoid 'magic numbers'.
 
+*   **Best Practice: Write programs for people and not for computers!**
 *   Many numbers may have an obvious meaning when you first use them, but that meaning
     could get forgotten over time
 *   Using a variable ensures that numbers have semantic meaning

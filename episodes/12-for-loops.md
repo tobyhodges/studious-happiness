@@ -26,7 +26,7 @@ keypoints:
     a character string,
     or some other collection.
 *   "for each thing in this group, do these operations"
-
+*   **Best Practice: Don't repeat yourself**
 ~~~
 for number in [2, 3, 5]:
     print(number)

@@ -170,8 +170,12 @@ print(shapes)
 ~~~
 {: .python}
 
+*   Defining collections as above looks cumbersome.  Often collections are defined
+    more programmatically, a little at a time, rather than in a single big block.
+
 ## Choosing the best data structure
 
+*   **Best Practice: Write programs for people and not for computers!**
 *   The best choice of data structure depends on how you will use it
 *   Focus on clarity before performance
 *   Good data structure choices can make your code easier to follow
