@@ -3,11 +3,11 @@ title: "Tuples & Dictionaries"
 teaching: 10
 exercises: 0
 questions:
-- "How can I add semantic value to my containers of multiple values?"
+- "How can I add semantic value to my collections of multiple values?"
 objectives:
 - "Identify lists, tuples and dictionaries"
 - "Write programs that create and modify dictionaries"
-- "Select the best data container type for a given purpose."
+- "Select the best data collection type for a given purpose."
 keypoints:
 - "A tuple is a list that can never be changed."
 - "Use an item's index to fetch it from a tuple."
@@ -16,8 +16,8 @@ keypoints:
 - "Dictionary keys are unique - only one item can exist per key"
 - "Use `del` to remove items from a list entirely"
 - "You can access all the keys and all the values of a dictionary"
-- "Containers (lists, tuples, dictionaries) may be nested arbitrarily"
-- "Code clarity & maintainability should guide choice of container"
+- "Collections (lists, tuples, dictionaries) may be nested arbitrarily"
+- "Code clarity & maintainability should guide choice of collection type"
 ---
 ## Tuples are "immutable" lists
 
@@ -153,7 +153,7 @@ dict_values(['Paul', 'Wilson'])
 {: .output}
 
 
-## All container types can be nested
+## All collection types can be nested
 
 *   Lists, tuples and dictionaries may all contain lists, tuples and dictionaries
 
@@ -182,9 +182,9 @@ print(shapes)
     *  Yes &rarr; consider a list, dictionaries can be sorted by their keys, but 
        order is not inherent
     *  All access to list data is either by looping through it in order, or by 
-       refering to an entry by it's ordinal place in the list
+       referring to an entry by it's ordinal place in the list
     *  All access to dictionary data is either by looping through it, perhaps 
-       in some arbitrary order, or by refering to an entry by it's semantic meaning
+       in some arbitrary order, or by referring to an entry by it's semantic meaning
 *   Does the addition of keys add semantic value?
     *  Yes &rarr; probably benefit from a dictionary
     *  No  &rarr; fabricating keys that don't have semantic value can be counter-productive
