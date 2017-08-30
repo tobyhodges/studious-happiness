@@ -65,14 +65,15 @@ print(names[0])
 ~~~
 {: .python}
 
-## Dictionaries add semantic value
+## Dictionaries add meaningful labels
 
 *    Once you start binding data together, it is often useful to add
      semantic meaning
-*    Dictionaries allow you to name the entries that our bound together
+*    Dictionaries allow you to label the entries that are bound together
      * Be sure to choose meaningful names!
 *    Dictionaries are mutable, you can change them
-     *   Because of semantic meaning, this is less dangerous
+     *   Because of meaningful labels, this is less dangerous
+
 ~~~
 name = {'first': 'Paul', 'last': 'Wilson'}
 print(name['first'], name['last'])
