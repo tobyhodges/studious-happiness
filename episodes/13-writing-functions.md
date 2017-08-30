@@ -20,10 +20,12 @@ keypoints:
 *   Understand larger/more complicated ideas by understanding and combining pieces.
     *   Components in a machine.
     *   Lemmas when proving theorems.
+    *   **Best Practice: Write programs for people, not computers**
 *   Functions serve the same purpose in programs.
     *   *Encapsulate* complexity so that we can treat it as a single "thing".
 *   Also enables *re-use*.
     *   Write one time, use many times.
+    *   **Best Practice: Don't repeat yourself**
 
 ## Define a function using `def` with a name, parameters, and a block of code.
 

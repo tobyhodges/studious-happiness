@@ -1,6 +1,6 @@
 ---
 title: "Built-in Functions and Help"
-teaching: 15
+teaching: 14
 exercises: 10
 questions:
 - "How can I use built-in functions?"
@@ -36,6 +36,9 @@ adjustment = 0.5   # Neither is this - anything after '#' is ignored.
 ## A function may take zero or more arguments.
 
 *   We have seen some functions already --- now let's take a closer look.
+*   Functions provide reusable shortcuts to capability that we could probably
+    implement manually
+    *   **Best Practice: Don't Repeat Yourself**
 *   An *argument* is a value passed into a function.
 *   `len` takes exactly one.
 *   `int`, `str`, and `float` create a new value from an existing one.
