@@ -1,15 +1,14 @@
 ---
 layout: break
-title: "Lunch"
+title: "Day's End"
 teaching: 0
 exercises: 0
 break: 45
 ---
 # Reflection exercise
 
-While eating lunch, meet some of your fellow learners!
-
-Some topics on which to reflect:
+We hope you enjoyed your first day. Before you return tomorrow, here are some
+topics on which to reflect:
 
 *   How is python different from other languages you know?
     *   Consider collections, loops, functions.
