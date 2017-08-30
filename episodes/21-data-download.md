@@ -3,7 +3,7 @@ title: "Introductory Exercises"
 teaching: 0
 exercises: 25
 questions:
-- "How can I run Python programs?"
+- "What questions do you have from yesterday?"
 objectives:
 - "Download the data needed for the next part of the lesson." 
 - "Review ideas from yesterday, including functions, conditionals, and loops." 
