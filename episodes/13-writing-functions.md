@@ -193,21 +193,6 @@ result of call is: None
 > Explain why the two lines of output appeared in the order they did.
 {: .challenge}
 
-> ## Encapsulation
->
-> Fill in the blanks to create a function that takes a single filename as an argument,
-> loads the data in the file named by the argument,
-> and returns the minimum value in that data.
->
-> ~~~
-> import pandas
->
-> def min_in_data(____):
->     data = ____
->     return ____
-> ~~~
-> {: .python}
-{: .challenge}
 
 > ## Find the First
 >
