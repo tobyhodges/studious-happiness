@@ -1,7 +1,7 @@
 ---
 title: "Pandas DataFrames"
-teaching: 15
-exercises: 15
+teaching: 10
+exercises: 10
 questions:
 - "How can I do statistical analysis of tabular data?"
 objectives:
@@ -17,20 +17,7 @@ keypoints:
 - "Use comparisons to select data based on value."
 - "Select values or NaN using a Boolean mask."
 ---
-## Use `DataFrame.iloc[..., ...]` to select values by numerical index.
 
-*   Can specify location by numerical index analogously to 2D version of character selection in strings.
-
-~~~
-import pandas
-data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
-print(data.iloc[0, 0])
-~~~
-{: .python}
-~~~
-1601.056136
-~~~
-{: .output}
 
 ## Use `DataFrame.loc[..., ...]` to select values by names.
 
@@ -91,59 +78,6 @@ Name: gdpPercap_1952, dtype: float64
 
 *   Would get the same result printing `data["gdpPercap_1952"]`
 *   Also get the same result printing `data.gdpPercap_1952` (since it's a column name)
-
-## Select multiple columns or rows using `DataFrame.loc` and a named slice.
-
-~~~
-print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'])
-~~~
-{: .python}
-~~~
-             gdpPercap_1962  gdpPercap_1967  gdpPercap_1972
-country
-Italy           8243.582340    10022.401310    12269.273780
-Montenegro      4649.593785     5907.850937     7778.414017
-Netherlands    12790.849560    15363.251360    18794.745670
-Norway         13450.401510    16361.876470    18965.055510
-Poland          5338.752143     6557.152776     8006.506993
-~~~
-{: .output}
-
-In the above code, we discover that **slicing using `loc` is inclusive at both
-ends**, which differs from **slicing using `iloc`**, where slicing indicates
-everything up to but not including the final index. 
-
-
-## Result of slicing can be used in further operations.
-
-*   Usually don't just print a slice.
-*   All the statistical operators that work on entire dataframes
-    work the same way on slices.
-*   E.g., calculate max of a slice.
-
-~~~
-print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max())
-~~~
-{: .python}
-~~~
-gdpPercap_1962    13450.40151
-gdpPercap_1967    16361.87647
-gdpPercap_1972    18965.05551
-dtype: float64
-~~~
-{: .output}
-
-~~~
-print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].min())
-~~~
-{: .python}
-~~~
-gdpPercap_1962    4649.593785
-gdpPercap_1967    5907.850937
-gdpPercap_1972    7778.414017
-dtype: float64
-~~~
-{: .output}
 
 ## Use comparisons to select data based on value.
 
@@ -217,6 +151,74 @@ min      12790.849560    10022.401310    12269.273780
 50%      13120.625535    15363.251360    18794.745670
 75%      13285.513523    15862.563915    18879.900590
 max      13450.401510    16361.876470    18965.055510
+~~~
+{: .output}
+
+## Select multiple columns or rows using `DataFrame.loc` and a named slice.
+
+~~~
+print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'])
+~~~
+{: .python}
+~~~
+             gdpPercap_1962  gdpPercap_1967  gdpPercap_1972
+country
+Italy           8243.582340    10022.401310    12269.273780
+Montenegro      4649.593785     5907.850937     7778.414017
+Netherlands    12790.849560    15363.251360    18794.745670
+Norway         13450.401510    16361.876470    18965.055510
+Poland          5338.752143     6557.152776     8006.506993
+~~~
+{: .output}
+
+In the above code, we discover that **slicing using `loc` is inclusive at both
+ends**, which differs from **slicing using `iloc`**, where slicing indicates
+everything up to but not including the final index. 
+
+
+## Result of slicing can be used in further operations.
+
+*   Usually don't just print a slice.
+*   All the statistical operators that work on entire dataframes
+    work the same way on slices.
+*   E.g., calculate max of a slice.
+
+~~~
+print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max())
+~~~
+{: .python}
+~~~
+gdpPercap_1962    13450.40151
+gdpPercap_1967    16361.87647
+gdpPercap_1972    18965.05551
+dtype: float64
+~~~
+{: .output}
+
+~~~
+print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].min())
+~~~
+{: .python}
+~~~
+gdpPercap_1962    4649.593785
+gdpPercap_1967    5907.850937
+gdpPercap_1972    7778.414017
+dtype: float64
+~~~
+{: .output}
+
+## Use `DataFrame.iloc[..., ...]` to select values by numerical index.
+
+*   Can specify location by numerical index analogously to 2D version of character selection in strings.
+
+~~~
+import pandas
+data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+print(data.iloc[0, 0])
+~~~
+{: .python}
+~~~
+1601.056136
 ~~~
 {: .output}
 

@@ -1,7 +1,7 @@
 ---
 title: "Programming Style"
-teaching: 15
-exercises: 15
+teaching: 5
+exercises: 5
 questions:
 - "How can I make my programs more readable?"
 - "How do most programmers format their code?"
@@ -26,6 +26,8 @@ keypoints:
     The [PEP8 application and Python library](https://pypi.python.org/pypi/pep8)
     can check your code for compliance with PEP8.
 
+**Best Practice: Write programs for people and not for computers!**
+
 ## Use assertions to check for internal errors.
 
 Assertions are a simple, but powerful method for making sure that the context in which your code is executing is as you expect.
@@ -40,7 +42,11 @@ def calc_bulk_density(mass, volume):
 
 If the assertion is `False`, the Python interpreter raises an `AssertionError` runtime exception. The source code for the expression that failed will be displayed as part of the error message. To ignore assertions in your code run the interpreter with the '-O' (optimize) switch. Assertions should contain only simple checks and never change the state of the program. For example, an assertion should never contain an assignment.
 
+**Best Practice: Plan for mistakes**
+
 ## Use docstrings to provide online help.
+
+**Best Practice: Document design & purpose, not just mechanics**
 
 *   If the first thing in a function is a character string
     that is not assigned to a variable,

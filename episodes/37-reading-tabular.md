@@ -1,7 +1,7 @@
 ---
 title: "Reading Tabular Data into DataFrames"
-teaching: 10
-exercises: 10
+teaching: 5
+exercises: 5
 questions:
 - "How can I read tabular data?"
 objectives:
@@ -152,6 +152,8 @@ Index(['gdpPercap_1952', 'gdpPercap_1957', 'gdpPercap_1962', 'gdpPercap_1967',
 ~~~
 {: .output}
 
+To see the row indices, you can use `DataFrame.index`.  
+
 ## Use `DataFrame.T` to transpose a dataframe.
 
 *   Sometimes want to treat columns as rows and vice versa.
@@ -222,6 +224,18 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 
 *   Not particularly useful with just two records,
     but very helpful when there are thousands.
+
+> ## Analyzing Europe
+>
+> Read the data in `gapminder_gdp_europe.csv`
+> (which should be in the same directory as `gapminder_gdp_oceania.csv`)
+> into a variable called `europe`
+> and display its summary statistics.
+>
+> How would you calculate just the minimum or maximum across the countries per year?
+> 
+> How would you calculate the mean GDP for each country?  
+{: .challenge}
 
 > ## Reading Other Data
 >
