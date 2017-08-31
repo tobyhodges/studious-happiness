@@ -1,7 +1,7 @@
 ---
 title: "Introductory Exercises"
 teaching: 0
-exercises: 25
+exercises: 20
 questions:
 - "What questions do you have from yesterday?"
 objectives:
@@ -16,15 +16,15 @@ As we get started, please complete the following two exercises.
 > ## Getting the Data
 > 
 > The data we will be using is taken from the [gapminder][gapminder] dataset.
-> To obtain it, download and unzip the file 
-> [python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip).
-> In order to follow the presented material, you should launch a Jupyter 
-> notebook in the root directory.  
+> Create a directory called `python-novice-gapminder`, and download the zip file
+> [python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip)
+> into it.  Then unzip the file (it should create a `data` folder.  Then start a Jupyter 
+> notebook from inside this directory.    
 {: .challenge}
 
 > ## Review From Yesterday
 > 
-> Write a function that determines whether a year between 1901 and 2000 is a leap year, 
+> In your notebook, write a function that determines whether a year between 1901 and 2000 is a leap year, 
 > where it prints a message like "1904 is a leap year" or "1905 is not a leap year" as 
 > output.  Use this function to evaluate the years 1928, 1950, 1959, 1972 and 1990.    
 > 

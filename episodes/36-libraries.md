@@ -1,7 +1,7 @@
 ---
 title: "Libraries"
-teaching: 10
-exercises: 10
+teaching: 5
+exercises: 5
 questions:
 - "How can I use software that other people have written?"
 - "How can I find out what that software does?"
