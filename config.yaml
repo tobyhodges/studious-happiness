@@ -33,7 +33,7 @@ life_cycle: 'stable'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/fishtree-attempt/swc-ext-python/'
+source: 'https://github.com/carpentries-incubator/swc-ext-python'
 
 # Default branch of your lesson
 branch: 'main'
@@ -91,7 +91,6 @@ profiles:
 
 
 carpentry_description: Lesson Description
-url: https://preview.carpentries.org/swc-ext-python
+url: 'https://carpentries-incubator.github.io/swc-ext-python'
 analytics: carpentries
 lang: en
-workbench-beta: yes
