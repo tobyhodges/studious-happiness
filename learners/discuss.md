@@ -1,6 +1,8 @@
 ---
-layout: page
-title: "Discussion"
+title: Discussion
 permalink: /discuss/
 ---
+
 FIXME: general discussion and further reading for learners.
+
+

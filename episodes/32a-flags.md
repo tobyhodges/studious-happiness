@@ -2,13 +2,19 @@
 title: Program Flags
 teaching: 5
 exercises: 5
-questions:
-- "How can I make an easy shortcut to analyze all files at once using a program flag?"
-objectives:
-- "Handle flags and files separately in a command-line program."
-keypoints:
-- "Adding command line flags can be a user-friendly way to accomplish common tasks."
 ---
+
+::::::::::::::::::::::::::::::::::::::: objectives
+
+- Handle flags and files separately in a command-line program.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: questions
+
+- How can I make an easy shortcut to analyze all files at once using a program flag?
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Handling Program Flags
 
@@ -24,15 +30,15 @@ we would like it to operate on all data sets in our directory.
 
 To explore what files are in the current directory, we'll be using the Python's `glob` module.
 
-*   In Unix, the term "globbing" means "matching a set of files with a pattern".
-*   The most common patterns are:
-    *   `*` meaning "match zero or more characters"
-    *   `?` meaning "match exactly one character"
-*   Python contains the `glob` library to provide pattern matching functionality
-*   The `glob` library contains a function also called `glob` to match file patterns
-*   E.g., `glob.glob('*.txt')` matches all files in the current directory
-    whose names end with `.txt`.
-*   Result is a (possibly empty) list of character strings.
+- In Unix, the term "globbing" means "matching a set of files with a pattern".
+- The most common patterns are:
+  - `*` meaning "match zero or more characters"
+  - `?` meaning "match exactly one character"
+- Python contains the `glob` library to provide pattern matching functionality
+- The `glob` library contains a function also called `glob` to match file patterns
+- E.g., `glob.glob('*.txt')` matches all files in the current directory
+  whose names end with `.txt`.
+- Result is a (possibly empty) list of character strings.
 
 <pre>
 import sys
@@ -70,29 +76,38 @@ for filename in filenames:</b>
     save_name = 'figs/'+split_name2 + '.png'
     plt.savefig(save_name)
 </pre>
-{: .python}
 
 ### Updating the repository
 
 Yet another successful update to the code. Let's
 commit our changes.
 
-~~~
+```bash
 $ git add gdp_plots.py
 $ git commit -m "Adding a flag to run script for all gdp data sets."
-~~~
-{: .bash}
+```
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## The Right Way to Do It
+
+If our programs can take complex parameters or multiple filenames,
+we shouldn't handle `sys.argv` directly.
+Instead,
+we should use Python's `argparse` library,
+which handles common cases in a systematic way,
+and also makes it easy for us to provide sensible error messages for our users.
+We will not cover this module in this lesson
+but you can go to Tshepang Lekhonkhobe's [Argparse tutorial](https://docs.python.org/dev/howto/argparse.html)
+that is part of Python's Official Documentation.
 
 
-> ## The Right Way to Do It
->
-> If our programs can take complex parameters or multiple filenames,
-> we shouldn't handle `sys.argv` directly.
-> Instead,
-> we should use Python's `argparse` library,
-> which handles common cases in a systematic way,
-> and also makes it easy for us to provide sensible error messages for our users.
-> We will not cover this module in this lesson
-> but you can go to Tshepang Lekhonkhobe's [Argparse tutorial](http://docs.python.org/dev/howto/argparse.html)
-> that is part of Python's Official Documentation.
-{: .callout}
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: keypoints
+
+- Adding command line flags can be a user-friendly way to accomplish common tasks.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
