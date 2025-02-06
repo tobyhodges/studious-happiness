@@ -53,6 +53,24 @@ print('10 mod 4 equals', 10 % 4)
 
 If you're not sure where to start, see the fill-in-the-blank version of this exercise below.
 
+:::::::::::::: solution
+
+## Solution
+
+```python
+def leap_year(year):
+    if year % 4 == 0:
+        print(year, "is a leap year")
+    else:
+        print(year, "is not a leap year.")
+
+year_list = [1928, 1950, 1959, 1972, 1990]
+for year in year_list:
+    leap_year(year)
+```
+
+:::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::: challenge
@@ -123,8 +141,6 @@ for year in ______:
 
 ::::::::::::::
 
-::::::::::::::::::::::
-
 :::::::::::::: solution
 
 ## Solution
@@ -142,6 +158,9 @@ for year in year_list:
 ```
 
 :::::::::::::::::::::::
+
+::::::::::::::::::::::
+
 
 ::::: challenge
 
