@@ -66,14 +66,14 @@ includes all the filenames.
 
 Here is our updated program.
 
-<pre>
+```python
 import sys
 import pandas
 # we need to import part of matplotlib
 # because we are no longer in a notebook
 import matplotlib.pyplot as plt
 
-<b>for filename in sys.argv[1:]:</b>
+for filename in sys.argv[1:]: # <= this is the line that is changing
 
     # load data and transpose so that country names are
     # the columns and their gdp data becomes the rows
@@ -91,7 +91,7 @@ import matplotlib.pyplot as plt
 
     # display the plot
     plt.show()
-</pre>
+```
 
 Now when the program is given multiple filenames
 
