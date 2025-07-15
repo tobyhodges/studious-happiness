@@ -73,7 +73,7 @@ import pandas
 # because we are no longer in a notebook
 import matplotlib.pyplot as plt
 
-for filename in sys.argv[1:]:
+for filename in sys.argv[1:]: # <= this is the line that is changing
 
     # load data and transpose so that country names are
     # the columns and their gdp data becomes the rows
