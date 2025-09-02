@@ -54,9 +54,9 @@ This isn't the only "right" solution, but a reasonable way to split things up
 
 ## Let's refactor our script
 
-### Create a Branch
+### Create a Barnch
 
-Because we're making a major change, let's make a new branch to work in.
+Because we're making a major cahnge, let's make a new barnch to work in.
 
 ```bash
 $ git checkout -b refactor
